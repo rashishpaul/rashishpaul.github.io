@@ -31,13 +31,13 @@ var computer = [];
   var plyrmves = $(document).keydown(function(e) {
          if (moves.length < computer.length) {
               if (e.keyCode == leftkey) {
-                  moves.push("green"); console.log(moves);
-              } else if (e.keyCode == rightkey) {
-                  moves.push("blue"); console.log(moves);
-              } else if (e.keyCode == upkey) {
-                  moves.push("red"); console.log(moves);
-              } else if (e.keyCode == downkey) {
                   moves.push("yellow"); console.log(moves);
+              } else if (e.keyCode == rightkey) {
+                  moves.push("red"); console.log(moves);
+              } else if (e.keyCode == upkey) {
+                  moves.push("green"); console.log(moves);
+              } else if (e.keyCode == downkey) {
+                  moves.push("blue"); console.log(moves);
               } else {
               console.log(moves);
             }
@@ -54,9 +54,11 @@ var computer = [];
           // return result;
        }
        console.log(result)
-       var lose = result.indexOf('nope')>-1;
-       console.log(lose);
-       var win = result.indexOf('win')
+       if (result.indexOf('nope')>-1){
+       console.log('lose');
+      }else {
+       console.log('win');
+     }
 
 
 
