@@ -11,32 +11,34 @@ $(document).ready(function(){
 
 //this function generates random sequence(rndmlghts) and sets the length of the round
 var computer = [];
-
-  var rndmlghts = function(){
+// $(".start").click(function(){
+  var randomlight = function randomlight(){
     // for (var i = 0; i < roundLength; i++) {
       computer.push(colors[Math.floor((Math.random() * colors.length))]);
     // }
     // return computer;
   };
   //this calls the function to run
-  rndmlghts(numberOfTurns);
-  console.log(computer);
+  randomlight(numberOfTurns);
+  console.log(computer)
 //setting up players move inputs with arrow keys
   var moves = [];
   var upkey = '38';
   var rightkey = '39';
   var downkey =  '40';
   var leftkey = '37';
-  var plyrmves = $(document).keydown(function(e) {
+  //used animation to get the arrow keys to transition opacity
+  var bright = $(document).keydown(function(e) {
          if (moves.length < computer.length) {
               if (e.keyCode == leftkey) {
-                  moves.push("yellow"); console.log(moves);
+                  $(".yellow").toggleClass('change'); moves.push("yellow"); console.log(moves);
               } else if (e.keyCode == rightkey) {
-                  moves.push("red"); console.log(moves);
+                  $(".red").toggleClass('change'); moves.push("red"); console.log(moves);
               } else if (e.keyCode == upkey) {
-                  moves.push("green"); console.log(moves);
+                  $(".green").toggleClass('change'); moves.push("green"); console.log(moves);
               } else if (e.keyCode == downkey) {
-                  moves.push("blue"); console.log(moves);
+                  $(".blue").toggleClass('change'); moves.push("blue"); console.log(moves);
+
               } else {
               console.log(moves);
             }
@@ -44,28 +46,21 @@ var computer = [];
       } if (moves.length === computer.length) {
         var result = []
          computer.forEach(function(value, index){
-        if (value === moves[index]){
-         rndmlghts;
-          // result.push('win');
+        if (value !== moves[index]){
+           result.indexOf('nope')>-1;
+           alert('lose');
+          //
         } else {
-          //console.log('nope');
-          result.push('nope');
-          // return result;
+        for (var i = 0; i < computer; i++){
+            rndmlghts;
+        console.log('win');
        }
-       console.log(result)
-       if (result.indexOf('nope')>-1){
-       console.log('lose');
-      }else {
-       // console.log('win');
+
+      })
      }
-
-
-
  })
 
-      }
 
-
- })
+ // })
 })
 
