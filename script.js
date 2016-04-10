@@ -56,11 +56,11 @@ var computer = [];
         console.log('win');
        }
 
-      })
-     }
- })
+      }
+     })
+ }
 
 
- // })
+  })
 })
 
