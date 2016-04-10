@@ -6,14 +6,13 @@ $(document).ready(function(){
   var blue = [1];
   var green = [2];
   var yellow = [3];
-  var numberOfTurns = 4;
+  var numberOfTurns = 1;
 
 
 //this function generates random sequence(rndmlghts) and sets the length of the round
 var computer = [];
 
   var rndmlghts = function(roundLength){
-    computer = [];
     for (var i = 0; i < roundLength; i++) {
       computer.push(crescents[Math.floor((Math.random() * crescents.length))]);
     }
@@ -69,154 +68,4 @@ var computer = [];
 
  })
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
