@@ -38,18 +38,15 @@ var computer = [];
                   $(".green").toggleClass('change'); moves.push("green"); console.log(moves);
               } else if (e.keyCode == downkey) {
                   $(".blue").toggleClass('change'); moves.push("blue"); console.log(moves);
-
               } else {
               console.log(moves);
-            }
-
-      } if (moves.length === computer.length) {
+  function winner(){
+         if (moves.length === computer.length) {
         var result = []
          computer.forEach(function(value, index){
         if (value !== moves[index]){
            result.indexOf('nope')>-1;
            alert('lose');
-          //
         } else {
         for (var i = 0; i < computer; i++){
             rndmlghts;
@@ -61,6 +58,9 @@ var computer = [];
  }
 
 
-  })
+  }
+}
+}
+})
 })
 
