@@ -1,6 +1,17 @@
 body{
-  background-color: black;
-
+  background: #232323;
+  overflow: hidden;
+}
+@font-face{
+  font-family: KGTangledUpInYou;
+  src: url('KGTangledUpInYou.ttf') format("trutype");
+}
+.title{
+  font-family: KGTangledUpInYou;
+  font-size: 100px;
+  text-align: center;
+  z-index: 50;
+  margin-top: 5%;
 }
 .container{
  position: absolute;
@@ -10,15 +21,8 @@ body{
  bottom: 20%;
  left: 25%;
  padding-right: 8em;
- /* padding-top: 1em; */
- background-color: black;
-}
-.button{
-  font: 60px;
-  bottom: 50%;
-  top: 20%
-
-
+ z-index: -50;
+ background-color: #232323;
 }
 .boxes {
   width: 12.5em;
@@ -41,7 +45,7 @@ body{
     opacity: .5;
   }
   100%{
-    opacity:0;
+    opacity:1;
   }
 }
 .change{

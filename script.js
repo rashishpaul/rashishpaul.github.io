@@ -2,33 +2,41 @@ $(document).ready(function(){
 
   // setup var values
   var colors= ["green", "red", "blue", "yellow"];
-  var red = [0];
-  var blue = [1];
-  var green = [2];
+  var green = [0];
+  var red = [1];
+  var blue = [2];
   var yellow = [3];
-  var numberOfTurns = "1";
+  var computer = [];
 
 
-//this function generates random sequence(rndmlghts) and sets the length of the round
-var computer = [];
-// $(".start").click(function(){
-  var randomlight = function randomlight(){
-    // for (var i = 0; i < roundLength; i++) {
-      computer.push(colors[Math.floor((Math.random() * colors.length))]);
-    // }
-    // return computer;
-  };
-  //this calls the function to run
-  randomlight(numberOfTurns);
+  var randomColors = function light(){
+      for(i = 0; i < computer.length; i++);
+      computer.push(Math.floor(Math.random() * colors.length)+1);
+      console.log(computer);
+
+
+  var auto = function gameStart(){
+  if (computer[0] === "green") {
+     $(".green").toggleClass('change');
+  } else if (computer[1] === "red") {
+     $(".red").toggleClass('change');
+  } else if (computer[2] === "blue") {
+    $(".blue").toggleClass('change');
+  } else if (computer[3] === "yellow") {
+    $(".yellow").toggleClass('change');
+  }
+  setTimeout(auto,3000);
   console.log(computer)
+
+
 //setting up players move inputs with arrow keys
   var moves = [];
   var upkey = '38';
   var rightkey = '39';
   var downkey =  '40';
   var leftkey = '37';
-  //used animation to get the arrow keys to transition opacity
-  var bright = $(document).keydown(function(e) {
+  //used @keyframes animation to get the arrow keys to transition opacity
+  var player = $(document).keydown(function(e) {
          if (moves.length < computer.length) {
               if (e.keyCode == leftkey) {
                   $(".yellow").toggleClass('change'); moves.push("yellow"); console.log(moves);
@@ -38,29 +46,28 @@ var computer = [];
                   $(".green").toggleClass('change'); moves.push("green"); console.log(moves);
               } else if (e.keyCode == downkey) {
                   $(".blue").toggleClass('change'); moves.push("blue"); console.log(moves);
-              } else {
-              console.log(moves);
+                }
   function winner(){
+         var result = [];
          if (moves.length === computer.length) {
-        var result = []
          computer.forEach(function(value, index){
-        if (value !== moves[index]){
+         if (value !== moves[index]){
            result.indexOf('nope')>-1;
-           alert('lose');
-        } else {
-        for (var i = 0; i < computer; i++){
-            rndmlghts;
+           console.log('lose');
+         } else {
+         for (var i = 0; i < computer; i++){
+            light();
         console.log('win');
-       }
+       } //closes for loop function winner
 
-      }
-     })
- }
+      }//closes else cond. function winner
+     })//closes for.Each method in function winner
+  }//closes function winner if statement
 
-
-  }
+}//closes funcion winner
+}//closes var player .keydown
+})//closes var player
 }
 }
-})
 })
 
