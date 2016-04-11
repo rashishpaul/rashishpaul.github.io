@@ -6,6 +6,7 @@ body{
   font-family: KGTangledUpInYou;
   src: url('KGTangledUpInYou.ttf') format("trutype");
 }
+
 .title{
   font-family: KGTangledUpInYou;
   font-size: 100px;
@@ -13,6 +14,7 @@ body{
   z-index: 50;
   margin-top: 5%;
 }
+
 .container{
  position: absolute;
  transform: rotate(45deg);
@@ -24,6 +26,7 @@ body{
  z-index: -50;
  background-color: #232323;
 }
+
 .boxes {
   width: 12.5em;
   height: 12.5em;
@@ -33,8 +36,6 @@ body{
   margin-left: 2%;
   margin-right: 2%;
   text-align: right;
-/*   padding: .05em .05em .05em;
- */
 }
 
 @keyframes fade{
@@ -48,13 +49,13 @@ body{
     opacity:1;
   }
 }
+
 .change{
   animation-name: fade;
   animation-duration: 500ms;
   animation-direction: normal;
   animation-fill-mode: backwards;
 }
-
 
 .green {
   float: left;
