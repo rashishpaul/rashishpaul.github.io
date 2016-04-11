@@ -37,13 +37,13 @@ $(document).ready(function(){
   $(document).keydown(function(e) {
     if (moves.length < computer.length) {
       if (e.keyCode == leftkey) {
-          $(rand == 3).toggleClass('change'); moves.push("yellow"); console.log(moves);
+          $(".yellow").toggleClass('change'); moves.push("yellow"); console.log(moves);
       } else if (e.keyCode == rightkey) {
-          $(rand == 1).toggleClass('change'); moves.push("red"); console.log(moves);
+          $(".red").toggleClass('change'); moves.push("red"); console.log(moves);
       } else if (e.keyCode == upkey) {
-          $(rand == 0).toggleClass('change'); moves.push("green"); console.log(moves);
+          $(".green").toggleClass('change'); moves.push("green"); console.log(moves);
       } else if (e.keyCode == downkey) {
-          $(rand == 2).toggleClass('change'); moves.push("blue"); console.log(moves);
+          $(".blue").toggleClass('change'); moves.push("blue"); console.log(moves);
       }
     }
     //debugger
