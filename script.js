@@ -50,13 +50,14 @@ $(document).ready(function(){
     // if computer.last !== moves.last
       //game over, reset variables, recall randomcolor()
       if (computer.last !== moves.last){
-        randomColors();alert("you lose")
+        alert("you lose!");
+        // randomColors();
       }
 
     //if computer.last === movest.last
       //increment a counter (add up a highscore)
       //recall randomColors() - do not reset variables.
-      if (computer.last === moves.last){
+      else if (computer.last === moves.last){
         randomColors();
       }
 
